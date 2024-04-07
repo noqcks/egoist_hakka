@@ -24,7 +24,7 @@
   },
   "dependencies": {
     "@badrap/bar-of-progress": "^0.1.2",
-    "@headlessui/react": "^0.3.1",
+    "@headlessui/react": "^1.7.18",
     "@prisma/client": "3.3.0",
     "@urql/exchange-graphcache": "^4.0.0",
     "apollo-server-micro": "^2.22.1",
