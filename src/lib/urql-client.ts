@@ -6,7 +6,8 @@ import {
   fetchExchange,
   ssrExchange,
 } from 'urql'
-import { cacheExchange } from '@urql/exchange-graphcache'
+import { cacheExchange } from '@urql/exchange-graphcache';
+import { makeDefaultStorage } from '@urql/exchange-graphcache/default-storage';
 
 export const createUrqlClient = () => {
   const ssr = ssrExchange({
@@ -17,7 +18,7 @@ export const createUrqlClient = () => {
     fetchOptions: {
       credentials: 'include',
     },
-    exchanges: [dedupExchange, cacheExchange(), ssr, fetchExchange],
+    exchanges: [dedupExchange, cacheExchange({ storage: makeDefaultStorage() }), ssr, fetchExchange],
   })
 }
 
