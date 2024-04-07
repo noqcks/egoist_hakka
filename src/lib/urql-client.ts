@@ -6,7 +6,7 @@ import {
   fetchExchange,
   ssrExchange,
 } from 'urql'
-import { cacheExchange } from '@urql/exchange-graphcache';
+import { cacheExchange } from '@urql/core';
 import { makeDefaultStorage } from '@urql/exchange-graphcache';;
 import { makeDefaultStorage } from '@urql/exchange-graphcache/default-storage';
 
