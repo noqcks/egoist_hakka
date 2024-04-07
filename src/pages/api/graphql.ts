@@ -25,7 +25,7 @@ const apiHandler: NextApiHandler = async (req, res) => {
 
   const apolloServer = new ApolloServer({
     schema,
-    tracing: !isProd,
+    // The 'tracing' option is not supported in the latest ApolloServer config.
     playground: {
       settings: {
         'request.credentials': 'include',
