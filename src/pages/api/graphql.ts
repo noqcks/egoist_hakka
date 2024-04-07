@@ -26,11 +26,7 @@ const apiHandler: NextApiHandler = async (req, res) => {
   const apolloServer = new ApolloServer({
     schema,
     // The 'tracing' option is not supported in the latest ApolloServer config.
-    playground: {
-      settings: {
-        'request.credentials': 'include',
-      },
-    },
+// The 'playground' option has been removed in the latest version of ApolloServer, so this block is deleted.
     introspection: true,
     async context({ req, res }) {
       const { user } = await getServerSession(req)
